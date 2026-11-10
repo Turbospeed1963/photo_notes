@@ -23,6 +23,11 @@ jobs:
         with:
           channel: stable
 
+      - name: Generate missing Android files
+        run: |
+          flutter create --platforms=android --project-name photo_notes --org com.example /tmp/scaffold
+          cp -rn /tmp/scaffold/android .
+
       - run: flutter pub get
       - run: flutter build apk --release --dart-define=APPWRITE_API_KEY=${{ secrets.APPWRITE_API_KEY }}
 
