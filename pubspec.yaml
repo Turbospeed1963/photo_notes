@@ -1,6 +1,16 @@
+name: photo_notes
+description: Photo notes app
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.8
-  dart_appwrite: ^16.0.0
+  dart_appwrite: ">=14.0.0"
   image_picker: ^1.1.2
+
+flutter:
+  uses-material-design: true
